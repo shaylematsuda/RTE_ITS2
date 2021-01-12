@@ -418,57 +418,131 @@ Pcomp_W0208 <- subset_samples(Porites.Pro, ParentTagID =="W0208") #subset by par
 
   
 ```
-Plots ProS
+Plots CLADE
 ```{r}
- Mcap_W0021_plot_PRO<-plot_bar(Mcap_W0021, "ID_HA", fill="clade", title="Mcap W0021")
+ Mcap_W0021_plot_clade<-plot_bar(Mcap_W0021, "ID_HA", fill="clade", title="Mcap W0021")
 
 
-Mcap_W0021_plot_PRO<-plot_bar(Mcap_W0021, "ID_HA", fill="clade", title="Mcap W0021")+
+Mcap_W0021_plot_clade<-plot_bar(Mcap_W0021, "ID_HA", fill="clade", title="Mcap W0021")+
+   theme(legend.position="none");Mcap_W0021_plot_clade_clade
+
+Mcap_W0023_plot_clade<-plot_bar(Mcap_W0023, "ID_HA", fill="clade", title="Mcap W0023")+
+   theme(legend.position="none");Mcap_W0023_plot_clade
+
+Mcap_W0024_plot_clade<-plot_bar(Mcap_W0024, "ID_HA", fill="clade", title="Mcap W0024")+
+   theme(legend.position="none");Mcap_W0024_plot_clade
+
+Mcap_W0051_plot_clade<-plot_bar(Mcap_W0051, "ID_HA", fill="clade", title="Mcap W0051")+
+   theme(legend.position="none");Mcap_W0051_plot_clade
+
+Mcap_W0052_plot_clade<-plot_bar(Mcap_W0052, "ID_HA", fill="clade", title="Mcap W0052")+
+   theme(legend.position="none");Mcap_W0052_plot_clade
+
+Mcap_W0055_plot_clade<-plot_bar(Mcap_W0055, "ID_HA", fill="clade", title="Mcap W0055")+
+   theme(legend.position="none");Mcap_W0055_plot_clade
+
+Mcap_W0121_plot_clade<-plot_bar(Mcap_W0121, "ID_HA", fill="clade", title="Mcap W0121")+
+   theme(legend.position="none");Mcap_W0121_plot_clade
+
+Mcap_W0125_plot_clade<-plot_bar(Mcap_W0125, "ID_HA", fill="clade", title="Mcap W0125")+
+   theme(legend.position="none");Mcap_W0125_plot_clade
+
+Mcap_W0143_plot_clade<-plot_bar(Mcap_W0143, "ID_HA", fill="clade", title="Mcap W0143")+
+   theme(legend.position="none");Mcap_W0143_plot_clade
+
+Mcap_W0144_plot_clade<-plot_bar(Mcap_W0144, "ID_HA", fill="clade", title="Mcap W0144")+
+   theme(legend.position="none");Mcap_W0144_plot_clade
+
+Mcap_W0162_plot_clade<-plot_bar(Mcap_W0162, "ID_HA", fill="clade", title="Mcap W0162")+
+   theme(legend.position="none");Mcap_W0162_plot_clade
+
+Mcap_W0163_plot_clade<-plot_bar(Mcap_W0163, "ID_HA", fill="clade", title="Mcap W0163")+
+   theme(legend.position="none");Mcap_W0163_plot_clade
+
+Mcap_W0167_plot_clade<-plot_bar(Mcap_W0167, "ID_HA", fill="clade", title="Mcap W0167")+
+   theme(legend.position="none");Mcap_W0167_plot_clade
+
+Mcap_W0169_plot_clade<-plot_bar(Mcap_W0169, "ID_HA", fill="clade", title="Mcap W0169")+
+   theme(legend.position="none");Mcap_W0169_plot_clade
+
+Mcap_W0170_plot_clade<-plot_bar(Mcap_W0170, "ID_HA", fill="clade", title="Mcap W0170")+
+   theme(legend.position="none");Mcap_W0170_plot_clade
+
+Mcap_W0208_plot_clade<-plot_bar(Mcap_W0208, "ID_HA", fill="clade", title="Mcap W0208")+
+   theme(legend.position="none");Mcap_W0208_plot_clade
+
+
+
+library("ggpubr")
+
+figureMcap1 <- ggarrange(Mcap_W0021_plot_clade, Mcap_W0023_plot_clade, Mcap_W0024_plot_clade,Mcap_W0051_plot_clade,Mcap_W0052_plot_clade,Mcap_W0055_plot_clade,
+                    labels = c("A", "B", "C","D","E","F"),
+                    ncol = 3, nrow = 2);figureMcap1
+
+figureMcap2 <- ggarrange(Mcap_W0121_plot_clade, Mcap_W0125_plot_clade, Mcap_W0143_plot_clade,Mcap_W0144_plot_clade,Mcap_W0162_plot_clade,Mcap_W0163_plot_clade,
+                    labels = c("A", "B", "C","D","E","F"),
+                    ncol = 3, nrow = 2);figureMcap2
+
+figureMcap3 <- ggarrange(Mcap_W0167_plot_clade, Mcap_W0169_plot_clade, Mcap_W0170_plot_clade,Mcap_W0208_plot_clade,
+                    labels = c("A", "B", "C","D","E","F"),
+                    ncol = 3, nrow = 2);figureMcap3
+
+figureMcapALL <- ggarrange(Mcap_W0021_plot_clade, Mcap_W0023_plot_clade, Mcap_W0024_plot_clade,Mcap_W0051_plot_clade,Mcap_W0052_plot_clade,Mcap_W0055_plot_clade,Mcap_W0121_plot_clade, Mcap_W0125_plot_clade, Mcap_W0143_plot_clade,Mcap_W0144_plot_clade,Mcap_W0162_plot_clade,Mcap_W0163_plot_clade,Mcap_W0167_plot_clade, Mcap_W0169_plot_clade, Mcap_W0170_plot_clade,Mcap_W0208_plot_clade,
+                    labels = c("A", "B", "C","D","E","F","G","H","I","J","K","L","M","N","O","P"),
+                    ncol = 4, nrow = 4);figureMcapALL
+
+```
+Plots PRO
+```{r}
+ Mcap_W0021_plot_PRO<-plot_bar(Mcap_W0021, "ID_HA", fill="its2_type_profile", title="Mcap W0021")
+
+
+Mcap_W0021_plot_PRO<-plot_bar(Mcap_W0021, "ID_HA", fill="its2_type_profile", title="Mcap W0021")+
    theme(legend.position="none");Mcap_W0021_plot_PRO_PRO
 
-Mcap_W0023_plot_PRO<-plot_bar(Mcap_W0023, "ID_HA", fill="clade", title="Mcap W0023")+
+Mcap_W0023_plot_PRO<-plot_bar(Mcap_W0023, "ID_HA", fill="its2_type_profile", title="Mcap W0023")+
    theme(legend.position="none");Mcap_W0023_plot_PRO
 
-Mcap_W0024_plot_PRO<-plot_bar(Mcap_W0024, "ID_HA", fill="clade", title="Mcap W0024")+
+Mcap_W0024_plot_PRO<-plot_bar(Mcap_W0024, "ID_HA", fill="its2_type_profile", title="Mcap W0024")+
    theme(legend.position="none");Mcap_W0024_plot_PRO
 
-Mcap_W0051_plot_PRO<-plot_bar(Mcap_W0051, "ID_HA", fill="clade", title="Mcap W0051")+
+Mcap_W0051_plot_PRO<-plot_bar(Mcap_W0051, "ID_HA", fill="its2_type_profile", title="Mcap W0051")+
    theme(legend.position="none");Mcap_W0051_plot_PRO
 
-Mcap_W0052_plot_PRO<-plot_bar(Mcap_W0052, "ID_HA", fill="clade", title="Mcap W0052")+
+Mcap_W0052_plot_PRO<-plot_bar(Mcap_W0052, "ID_HA", fill="its2_type_profile", title="Mcap W0052")+
    theme(legend.position="none");Mcap_W0052_plot_PRO
 
-Mcap_W0055_plot_PRO<-plot_bar(Mcap_W0055, "ID_HA", fill="clade", title="Mcap W0055")+
+Mcap_W0055_plot_PRO<-plot_bar(Mcap_W0055, "ID_HA", fill="its2_type_profile", title="Mcap W0055")+
    theme(legend.position="none");Mcap_W0055_plot_PRO
 
-Mcap_W0121_plot_PRO<-plot_bar(Mcap_W0121, "ID_HA", fill="clade", title="Mcap W0121")+
+Mcap_W0121_plot_PRO<-plot_bar(Mcap_W0121, "ID_HA", fill="its2_type_profile", title="Mcap W0121")+
    theme(legend.position="none");Mcap_W0121_plot_PRO
 
-Mcap_W0125_plot_PRO<-plot_bar(Mcap_W0125, "ID_HA", fill="clade", title="Mcap W0125")+
+Mcap_W0125_plot_PRO<-plot_bar(Mcap_W0125, "ID_HA", fill="its2_type_profile", title="Mcap W0125")+
    theme(legend.position="none");Mcap_W0125_plot_PRO
 
-Mcap_W0143_plot_PRO<-plot_bar(Mcap_W0143, "ID_HA", fill="clade", title="Mcap W0143")+
+Mcap_W0143_plot_PRO<-plot_bar(Mcap_W0143, "ID_HA", fill="its2_type_profile", title="Mcap W0143")+
    theme(legend.position="none");Mcap_W0143_plot_PRO
 
-Mcap_W0144_plot_PRO<-plot_bar(Mcap_W0144, "ID_HA", fill="clade", title="Mcap W0144")+
+Mcap_W0144_plot_PRO<-plot_bar(Mcap_W0144, "ID_HA", fill="its2_type_profile", title="Mcap W0144")+
    theme(legend.position="none");Mcap_W0144_plot_PRO
 
-Mcap_W0162_plot_PRO<-plot_bar(Mcap_W0162, "ID_HA", fill="clade", title="Mcap W0162")+
+Mcap_W0162_plot_PRO<-plot_bar(Mcap_W0162, "ID_HA", fill="its2_type_profile", title="Mcap W0162")+
    theme(legend.position="none");Mcap_W0162_plot_PRO
 
-Mcap_W0163_plot_PRO<-plot_bar(Mcap_W0163, "ID_HA", fill="clade", title="Mcap W0163")+
+Mcap_W0163_plot_PRO<-plot_bar(Mcap_W0163, "ID_HA", fill="its2_type_profile", title="Mcap W0163")+
    theme(legend.position="none");Mcap_W0163_plot_PRO
 
-Mcap_W0167_plot_PRO<-plot_bar(Mcap_W0167, "ID_HA", fill="clade", title="Mcap W0167")+
+Mcap_W0167_plot_PRO<-plot_bar(Mcap_W0167, "ID_HA", fill="its2_type_profile", title="Mcap W0167")+
    theme(legend.position="none");Mcap_W0167_plot_PRO
 
-Mcap_W0169_plot_PRO<-plot_bar(Mcap_W0169, "ID_HA", fill="clade", title="Mcap W0169")+
+Mcap_W0169_plot_PRO<-plot_bar(Mcap_W0169, "ID_HA", fill="its2_type_profile", title="Mcap W0169")+
    theme(legend.position="none");Mcap_W0169_plot_PRO
 
-Mcap_W0170_plot_PRO<-plot_bar(Mcap_W0170, "ID_HA", fill="clade", title="Mcap W0170")+
+Mcap_W0170_plot_PRO<-plot_bar(Mcap_W0170, "ID_HA", fill="its2_type_profile", title="Mcap W0170")+
    theme(legend.position="none");Mcap_W0170_plot_PRO
 
-Mcap_W0208_plot_PRO<-plot_bar(Mcap_W0208, "ID_HA", fill="clade", title="Mcap W0208")+
+Mcap_W0208_plot_PRO<-plot_bar(Mcap_W0208, "ID_HA", fill="its2_type_profile", title="Mcap W0208")+
    theme(legend.position="none");Mcap_W0208_plot_PRO
 
 
@@ -493,35 +567,30 @@ figureMcapALL <- ggarrange(Mcap_W0021_plot_PRO, Mcap_W0023_plot_PRO, Mcap_W0024_
 
 ```
 
+
+
+
 big fig
 ```{r}
 theme_set(theme_classic())
 
-figureMcapALL <- ggarrange(
-  Mcap_W0021_plot_PRO, Mcap_W0023_plot_PRO, Mcap_W0024_plot_PRO,Mcap_W0051_plot_PRO,Mcap_W0052_plot_PRO,Mcap_W0055_plot_PRO,Mcap_W0121_plot_PRO, Mcap_W0125_plot_PRO, Mcap_W0143_plot_PRO,Mcap_W0144_plot_PRO,Mcap_W0162_plot_PRO,Mcap_W0163_plot_PRO,Mcap_W0167_plot_PRO, Mcap_W0169_plot_PRO, Mcap_W0170_plot_PRO,Mcap_W0208_plot_PRO,
-                    labels = c("A", "B", "C","D","E","F","G","H","I","J","K","L","M","N","O","P"),
-                    ncol = 4, nrow = 4);figureMcapALL
 
-igureMcap3 <- ggarrange(Mcap_W0021_plot, Mcap_W0023_plot, Mcap_W0024_plot,Mcap_W0051_plot,Mcap_W0052_plot,Mcap_W0055_plot,Mcap_W0167_plot, Mcap_W0169_plot, Mcap_W0170_plot,Mcap_W0208_plot,Mcap_W0121_plot, Mcap_W0125_plot, Mcap_W0143_plot,Mcap_W0144_plot,Mcap_W0162_plot,Mcap_W0163_plot,Mcap_W0167_plot, Mcap_W0169_plot, Mcap_W0170_plot,Mcap_W0208_plot,
-                    labels = c("A", "B", "C","D","E","F"),
-                    ncol = 3, nrow = 2);figureMcap3
 
-figureMcapProDiv1 <- ggarrange(Mcap_W0021_plot_PRO, Mcap_W0023_plot_PRO, Mcap_W0024_plot_PRO,Mcap_W0051_plot_PRO,Mcap_W0021_plot, Mcap_W0023_plot, Mcap_W0024_plot,Mcap_W0051_plot,
-                    labels = c("A", "B", "C","D","E","F","G","H"),
-                    ncol = 4, nrow = 2);figureMcapProDiv1
+figureMcapProDiv1 <- ggarrange(Mcap_W0021_plot_clade, Mcap_W0023_plot_clade, Mcap_W0024_plot_clade,Mcap_W0051_plot_clade,Mcap_W0021_plot_PRO, Mcap_W0023_plot_PRO, Mcap_W0024_plot_PRO,Mcap_W0051_plot_PRO,Mcap_W0021_plot, Mcap_W0023_plot, Mcap_W0024_plot,Mcap_W0051_plot,
+                    ncol = 4, nrow = 3);figureMcapProDiv1
 
-figureMcapProDiv2 <- ggarrange(Mcap_W0052_plot_PRO,Mcap_W0055_plot_PRO,Mcap_W0121_plot_PRO,Mcap_W0125_plot_PRO,
+figureMcapProDiv2 <- ggarrange(Mcap_W0052_plot_clade,Mcap_W0055_plot_clade,Mcap_W0121_plot_clade,Mcap_W0125_plot_clade,
+                               Mcap_W0052_plot_PRO,Mcap_W0055_plot_PRO,Mcap_W0121_plot_PRO,Mcap_W0125_plot_PRO,
                                Mcap_W0052_plot,Mcap_W0055_plot,Mcap_W0121_plot, Mcap_W0125_plot,
-                    labels = c("A", "B", "C","D","E","F","G","H"),
-                    ncol = 4, nrow = 2);figureMcapProDiv2
+                    ncol = 4, nrow = 3);figureMcapProDiv2
 
-figureMcapProDiv3 <- ggarrange(Mcap_W0143_plot_PRO,Mcap_W0144_plot_PRO,Mcap_W0162_plot_PRO,Mcap_W0163_plot_PRO,Mcap_W0143_plot,Mcap_W0144_plot,Mcap_W0162_plot,Mcap_W0163_plot,
-                    labels = c("A", "B", "C","D","E","F","G","H"),
-                    ncol = 4, nrow = 2);figureMcapProDiv3
+figureMcapProDiv3 <- ggarrange(Mcap_W0143_plot_clade,Mcap_W0144_plot_clade,Mcap_W0162_plot_clade,Mcap_W0163_plot_clade,
+                               Mcap_W0143_plot_PRO,Mcap_W0144_plot_PRO,Mcap_W0162_plot_PRO,Mcap_W0163_plot_PRO,Mcap_W0143_plot,Mcap_W0144_plot,Mcap_W0162_plot,Mcap_W0163_plot,
+                    ncol = 4, nrow = 3);figureMcapProDiv3
 
-figureMcapProDiv4 <- ggarrange(Mcap_W0167_plot_PRO, Mcap_W0169_plot_PRO, Mcap_W0170_plot_PRO,Mcap_W0208_plot_PRO,Mcap_W0167_plot, Mcap_W0169_plot, Mcap_W0170_plot,Mcap_W0208_plot,
-                    labels = c("A", "B", "C","D","E","F","G","H"),
-                    ncol = 4, nrow = 2);figureMcapProDiv4
+figureMcapProDiv4 <- ggarrange(Mcap_W0167_plot_clade, Mcap_W0169_plot_clade, Mcap_W0170_plot_clade,Mcap_W0208_plot_clade,
+                               Mcap_W0167_plot_PRO, Mcap_W0169_plot_PRO, Mcap_W0170_plot_PRO,Mcap_W0208_plot_PRO,Mcap_W0167_plot, Mcap_W0169_plot, Mcap_W0170_plot,Mcap_W0208_plot,
+                    ncol = 4, nrow = 3);figureMcapProDiv4
 
 
 ```
